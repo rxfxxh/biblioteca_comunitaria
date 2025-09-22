@@ -1,61 +1,67 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Biblioteca Comunitária</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+body {
+    background-color: #BDAAA2;
+}
 
-        body {
-            background-color: #BDAAA2;
-        }
+header {
+    background-color: #9b7465;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 
-        header {
-            background-color: #9b7465;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px;
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        }
+header button {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-right: 5%;
+    border-radius: 20px;
+    font-size: 20px;
+    height: 30px;
+    width: 100px;
+    cursor: pointer;
+}
 
-        header button {
-            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-            margin-right: 5%;
-            border-radius: 20px;
-            font-size: 25px;
-            height: 50px;
-            width: 130px;
-            cursor: pointer;
-        }
+header img {
+    margin-left: 5%;
+    height: 180px;
+}
 
-        header img {
-            margin-left: 5%;
-            height: 180px;
-        }
-    </style>
-</head>
+/* Regra geral para seções (mantenha como está, mas a .Pesquisa vai sobrescrever) */
+section {
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
 
-<body>
-    <header>
-        <img src="images/download.png" alt="logo" />
-        <button id="myButton">Entrar</button>
-    </header>
+/* Ajustes específicos para a seção .Pesquisa: remove margens laterais para cobertura total */
+.Pesquisa {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px; /* Mantenha se quiser espaço interno, ou defina como 0 para cobertura total */
+    margin-left: 0;  /* Remove margem esquerda para cobrir o canto esquerdo */
+    margin-right: 0; /* Remove margem direita para cobrir o canto direito */
+    margin-top: 0;  /* Mantém a margem superior da regra geral */
+}
 
-    <script>
-        // Garante que o DOM está carregado antes de adicionar o evento
-        document.addEventListener("DOMContentLoaded", function () {
-            document.getElementById("myButton").addEventListener("click", function () {
-                alert("Samuel da tribo indigena");
-            });
-        });
-    </script>
-</body>
-
-</html>
+/* Ajustes para a imagem dentro de .Pesquisa: preenche largura total e cobre cantos */
+.Pesquisa img {
+    width: 100%;      /* Preenche toda a largura da seção */
+    height: 300px;    /* Mantém a altura fixa */
+    object-fit: cover; /* Garante que a imagem cubra toda a área sem distorção (corta bordas se necessário) */
+    object-position: center; /* Centraliza o corte da imagem para melhor visual */
+}
+.destaques {
+    margin-top: 3% ;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+section img {
+    height: 300px;
+}
