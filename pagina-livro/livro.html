@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do Livro</title>
+  <link rel="stylesheet" href="style-livro.css">
+</head>
+<body>
+  <a href="/main/index.html" class="voltar">⬅ Voltar</a>
+  <div id="livro-detalhe"></div>
+
+
+  <script src="script-livro.js"></script>
+  <script>
+    // Pegar o id da URL
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    const livro = livros[id];
+    const detalhes = document.getElementById("livro-detalhe");
+
+    if (livro) {
+      detalhes.innerHTML = `
+        <div class="livro-detalhe">
+          <img src="${livro.capa}" alt="${livro.titulo}">
+          <div>
+            <h1>${livro.titulo}</h1>
+            <h3>Autor: ${livro.autor}</h3>
+            <p>${livro.descricao}</p>
+            <button>
+            </div>
+          </div>
+        </div>
+      `;
+    } else {
+      detalhes.innerHTML = "<p>Livro não encontrado.</p>";
+    }
+
+  </script>
+</body>
+</html>
