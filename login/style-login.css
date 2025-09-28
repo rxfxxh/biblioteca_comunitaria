@@ -1,0 +1,90 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #E0D7D3;
+    font-family: "Open Sans", sans-serif;
+}
+
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 400px; 
+}
+
+.card h1, .card h2 {
+    margin-bottom: 20px;
+}
+
+.dados {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: -5%;
+}
+
+.dados input {
+    width: 100%;          
+    height: 45px;         
+    padding: 0 10px;      
+    font-size: 16px;      
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: width 0.3s ease;
+}
+
+.dados input:focus {
+    border-color: #4CAF50;
+}
+
+/* Botão */
+.dados button {
+    height: 45px;
+    background: #8e8e8e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+    margin-left: 5%;
+}
+
+.dados button:hover {
+    background: #505050;
+}
+
+
+.harry:hover {
+    text-decoration: underline;
+    transition-delay: 0ms;
+    transition-duration: 0.2s;
+    transition-property: all;
+    background: #636262;
+    transform: translateY(-2px);
+}
+
+.harry {
+    position: fixed;       /* garante que fique fixo na tela */
+    top: 30px;          /* distância da parte inferior */
+    left: 30px;           /* distância da lateral direita */
+    height: 24px;
+    width: 80px;
+    border-radius: 12px;
+    background-color: white;
+    color: black;
+    text-align: center;
+    line-height: 24px;     /* centraliza o texto verticalmente */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+}
+.harry a {
+    color: inherit;        /* mantém a cor do botão */
+    text-decoration: none;
+    display: block;
+}

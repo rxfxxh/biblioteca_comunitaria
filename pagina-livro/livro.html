@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do Livro</title>
+  <link rel="stylesheet" href="style-livro.css">
+</head>
+
+<body>
+  <div class="harry">
+    <a href="/index.html" class="voltar">⬅ Voltar</a>
+  </div>
+  <div id="livro-detalhe"></div>
+  <div id="emprestimo" style="display:none;">
+    <div class="container">
+      <button class="back">Voltar</button>
+    </div>
+  </div>
+
+  <script src="script-livro.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    const livro = livros[id];
+    const detalhes = document.getElementById("livro-detalhe");
+
+    function exibirEmprestimo() {
+      document.getElementById("emprestimo").style.display = "block";
+
+      setTimeout(() => {
+        document.getElementById("emprestimo").style.opacity = 1;
+      }, 10);
+      document.getElementById("livro-detalhe").style.display = "none";
+    }
+
+    if (livro) {
+      detalhes.innerHTML = `
+        <div class="livro-detalhe">
+          <div>
+            <h1>${livro.titulo}</h1>
+            <h3>Autor(a): ${livro.autor}</h3>
+            <img src="${livro.capa}" alt="${livro.titulo}">
+            <p>${livro.descricao}</p>
+            <button onclick="exibirEmprestimo()" class="btn ${!livro.disponibilidade ? 'disabled' : ''}" ${!livro.disponibilidade ? 'disabled' : ''}>
+              Emprestar
+            </button>
+            <div class="info-adicional">
+              <p><strong>Editora:</strong> ${livro.editora}</p>
+              <p><strong>Ano de Publicação:</strong> ${livro.ano}</p>
+              <p><strong>Gênero:</strong> ${livro.genero}</p>
+              <p><strong>Número de Páginas:</strong> ${livro.paginas}</p>
+              <p><strong>Disponibilidade:</strong>
+                <span style="color: ${livro.disponibilidade ? 'green' : 'red'};">
+                  ${livro.disponibilidade ? 'Disponível' : 'Indisponível'}
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      `;
+    } else {
+      detalhes.innerHTML = "<p>Livro não encontrado.</p>";
+    }
+  </script>
+</body>
+
+</html>
