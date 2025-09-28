@@ -118,7 +118,7 @@ main {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url('images/bgimage.jpg');
+    background-image: url('..images/bgimage.jpg');
     background-size: cover;
     background-position: center;
     filter: blur(3px);
@@ -746,4 +746,5 @@ a:visited {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     transform: scale(1.05);
 }
+
 
