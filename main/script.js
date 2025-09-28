@@ -146,3 +146,16 @@ async function registerSW() {
     }
   }
 }
+
+// Salvar posição ao sair da página
+window.addEventListener('beforeunload', function() {
+    sessionStorage.setItem('scrollPos', window.scrollY);
+});
+
+// Restaurar posição quando carregar
+window.addEventListener('load', function() {
+    const scrollPos = sessionStorage.getItem('scrollPos');
+    if(scrollPos) {
+        window.scrollTo(0, parseInt(scrollPos));
+    }
+});
