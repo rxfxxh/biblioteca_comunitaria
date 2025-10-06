@@ -131,21 +131,6 @@ document.getElementById('procurar').addEventListener('keypress', function(e) {
   }
 });
 
-// Se você tem onclick no botão da lupa (ex: onclick="fazerBusca(true)"), isso ativa o scroll só no clique
-
-window.addEventListener('load', () => {
-  registerSW()
-})
-async function registerSW() {
-  if ('serviceWorker' in navigator) {
-    try {
-      await navigator.serviceWorker.register('./sw.js');
-    }
-    catch (e) {
-      console.log('SW registration failed');
-    }
-  }
-}
 
 // Salvar posição ao sair da página
 window.addEventListener('beforeunload', function() {
@@ -158,4 +143,5 @@ window.addEventListener('load', function() {
     if(scrollPos) {
         window.scrollTo(0, parseInt(scrollPos));
     }
+
 });
