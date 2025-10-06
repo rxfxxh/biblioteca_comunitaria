@@ -277,9 +277,17 @@
     </footer>
 
     <script src="main/script.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("./service-worker.js", { scope: "./" })
+          .then(reg => console.log("SW registrado:", reg.scope))
+          .catch(err => console.error("SW erro:", err));
+  }
+</script>
 </body>
 
 
 </html>
+
 
 
