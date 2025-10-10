@@ -1,7 +1,7 @@
 {
   "id": "./",
-  "name": "Ego + Aura (UPD 10)",
-  "short_name": "egoaura",
+  "name": "Biblioteca Comunitária",
+  "short_name": "Biblioteca-Comunitária",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
