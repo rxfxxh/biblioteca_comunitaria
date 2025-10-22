@@ -337,3 +337,7 @@ tbody tr:nth-child(even) {
   right: 10px;
   color: #4a90e2;
 }
+
+div {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
