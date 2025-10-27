@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Biblioteca Comunitária</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="main/style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="/icons/favicon.ico">
+</head>
+
+<body>
+    <header>
+        <img src="images/download.png" alt="logo" class="logo"/>
+        <div class="login">
+            <button class="btn-pulse">Entrar</button>
+            <div class="login-content">
+                <a href="login/login.html">Login</a>
+                <a href="cadastro/cadastro.html">Cadastrar-se</a>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+        <div class="search-bars">
+            <div class="barra1">
+                <input id="procurar" type="search" placeholder="Pesquisar livros, autores, gêneros..." />
+                <button type="button" class="icon-button">
+                    <img src="images/lupa.png" alt="icone">
+            </div>
+            <div class="navegacao">
+                <nav>
+                    <a href="#destaques">Destaques</a>
+                    <a href="#nacionais">Nacionais</a>
+                    <a href="#ficcao">Ficção</a>
+                    <a href="#hqs">HQ's</a>
+                    <a href="#terror">Revistas</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="carousel-wrapper" id="destaques">
+            <h2>Livros em Destaque</h2>
+            <button class="nav prev">&#10094;</button>
+            <div class="carousel">
+                <div class="group" id="carouselGroup">
+                    <div class="card">
+                        <a href="pagina-livro/livro.html?id=a-rainha-vermelha">
+                            <h6>A Rainha Vermelha</h6>
+                            <p>Victoria Aveyard</p>
+                            <img src="images/livros/arainhavermelha.jpg" alt="arainhavermelha">
+                            <p>Romance(2015)</p>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="pagina-livro/livro.html?id=a-selecao">
+                            <h6>A Seleção</h6>
+                            <p>Kiera Cass</p>
+                            <img src="images/livros/aselecao.jpg" alt="aselecao">
+                            <p>Fantasia romântica(2012)</p>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="pagina-livro/livro.html?id=diario-de-um-banana" alt="diariodeumbanana">
+                            <h6>Diário de um Banana</h6>
+                            <p>Jeff Kinney</p>
+                            <img src="images/livros/diariodeumbanana.jpg">
+                            <p>Ficção / humor / comédia (2007)</p>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="pagina-livro/livro.html?id=o-pequeno-principe">
+
+                            <h6>O Pequeno Príncipe</h6>
+                            <p>Antoine De Saint-Exupéry</p>
+                            <img src="images/livros/opequenoprincipe.jpg" alt="opequenoprincipe">
+                            <p>Literatura infantil / fábula (1943)</p>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="pagina-livro/livro.html?id=harry-potter">
+                            <h6>Harry Potter e a Pedra Filosofal</h6>
+                            <p>J.K. Rowling</p>
+                            <img src="images/livros/harrypotter.jpg" alt="Harry Potter e a Pedra Filosofal">
+                            <p>Fantasia (1997)</p>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <a href="pagina-livro/livro.html?id=senhor-dos-aneis">
+                            <h6>O Senhor dos Anéis: A Sociedade do Anel</h6>
+                            <p>J.R.R. Tolkien</p>
+                            <img src="images/livros/osenhordosaneis.jpg" alt="O Senhor dos Anéis">
+                            <p>Fantasia épica (1954)</p>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <a href="pagina-livro/livro.html?id=1984">
+                            <h6>1984</h6>
+                            <p>George Orwell</p>
+                            <img src="images/livros/1984.jpg" alt="1984">
+                            <p>Distopia / Ficção política (1949)</p>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <a href="pagina-livro/livro.html?id=dom-quixote">
+                            <h6>Dom Quixote</h6>
+                            <p>Miguel de Cervantes</p>
+                            <img src="images/livros/domquixote.jpg" alt="Dom Quixote">
+                            <p>Romance clássico (1605)</p>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <a href="pagina-livro/livro.html?id=orgulho-e-preconceito">
+                            <h6>Orgulho e Preconceito</h6>
+                            <p>Jane Austen</p>
+                            <img src="images/livros/orgulhoepreconceito.jpg" alt="Orgulho e Preconceito">
+                            <p>Romance (1813)</p>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <a href="pagina-livro/livro.html?id=o-morro-dos-ventos-uivantes">
+                            <h6>O Morro dos Ventos Uivantes</h6>
+                            <p>Emily Brontë</p>
+                            <img src="images/livros/omorrodosventosuivantes.jpg" alt="O Morro dos Ventos Uivantes">
+                            <p>Romance gótico (1847)</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="nav next">&#10095;</button>
+        </div>
+        </div>
+        </div>
+
+        <div class="carousel-wrapper" id="nacionais">
+            <h2>Livros Nacionais</h2>
+            <button class="nav prev1">&#10094;</button>
+            <div class="carousel">
+                <div class="group" id="carouselGroup1">
+                    <div class="card">
+                        <a href="pagina-livro/livro.html?id=o-alquimista">
+                            <h6>O Alquimista</h6>
+                            <p>Paulo Coelho</p>
+                            <img src="images/livros/oalquimista.jpg" alt="oalquimista">
+                            <p>Romance (1988)</p>
+                        </a>
+                    </div>
+                    <div class="card">
+                        <a href="pagina-livro/livro.html?id=dom-casmurro">
+                            <h6>Dom Casmurro</h6>
+                            <p>Machado de Assis</p>
+                            <img src="images/livros/domcasmurro.webp" alt="domcasmurro">
+                            <p>Romance (1899)</p>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <a href="pagina-livro/livro.html?id=capitães-da-areia">
+                            <h6>Capitães da Areia</h6>
+                            <p>Jorge Amado</p>
+                            <img src="images/livros/capitaesdaareia.jpg" alt="capitaesdaareia">
+                            <p>Romance (1937)</p>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <a href="pagina-livro/livro.html?id=a-marca-de-uma-lágrima">
+                            <h6>A Marca de uma Lágrima</h6>
+                            <p>Pedro Bandeira</p>
+                            <img src="images/livros/amarcadeumalagrima.jpg" alt="amarcadeumalagrima">
+                            <p>Infantojuvenil (1985)</p>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <a href="pagina-livro/livro.html?id=memorias-postumas-de-bras-cubas">
+                            <h6>Memórias Póstumas de Brás Cubas</h6>
+                            <p>Machado de Assis</p>
+                            <img src="images/livros/memoriaspostumasdebrascubas.jpg" alt="memoriaspostas">
+                            <p>Romance (1881)</p>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <a href="pagina-livro/livro.html?id=vidas-secas">
+                            <h6>Vidas Secas</h6>
+                            <p>Graciliano Ramos</p>
+                            <img src="images/livros/vidassecas.jpg" alt="vidas-secas">
+                            <p>Romance (1938)</p>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <a href="pagina-livro/livro.html?id=marco-zero">
+                            <h6>Macunaíma</h6>
+                            <p>Mário de Andrade</p>
+                            <img src="images/livros/macunaima.jpg" alt="macunaima">
+                            <p>Romance (1928)</p>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <a href="pagina-livro/livro.html?id=menina-que-roubava-livros">
+                            <h6>A Menina que Roubava Livros</h6>
+                            <p>Markus Zusak (adaptação nacional disponível)</p>
+                            <img src="images/livros/ameninaqueroubavalivros.jpg" alt="meninaqueroubavalivros">
+                            <p>Romance (2005)</p>
+                        </a>
+                    </div>
+
+                    <div class="card">
+                        <a href="pagina-livro/livro.html?id=o-menino-no-espelho">
+                            <h6>O Menino no Espelho</h6>
+                            <p>Fernando Sabino</p>
+                            <img src="images/livros/omeninonoespelho.jpg" alt="o-menino-no-espelho">
+                            <p>Romance juvenil (1982)</p>
+                        </a>
+                    </div>
+
+
+                    <div class="card">
+                        <a href="pagina-livro/livro.html?id=o-seu-jose">
+                            <h6>O Auto da Compadecida</h6>
+                            <p>Ariano Suassuna</p>
+                            <img src="images/livros/autodacompadecida.webp" alt="auto-da-compadecida">
+                            <p>Peça/romance (1955)</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="nav next1">&#10095;</button>
+        </div>
+        </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <section>
+            Alguma duvida ou sugestão?
+            Contate-nos via email: <a href="mailto:bibliotecadavila@gmail.com">bibliotecadavila@gmail.com</a>
+        </section>
+        <section>
+             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+                integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+                crossorigin="anonymous">
+            
+            <ul>
+                <li>
+                    <a href="https://facebook.com">
+                        <i class="fab fa-facebook-f icon"></i> </a>
+                </li>
+                <li>
+                    <a href="https://x.com"><i class="fab fa-twitter icon"></i></a>
+                </li>
+                <li>
+                    <a href="https://linkedin.com"><i class="fab fa-linkedin-in icon"></i></a>
+                </li>
+                <li>
+                    <a href="https://instagram.com"><i class="fab fa-instagram icon"></i></a>
+                </li>
+            </ul>
+            &copy; 2025 Biblioteca Comunitária. Todos os direitos reservados.
+        </section>
+    </footer>
+
+    <script src="main/script.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("./service-worker.js", { scope: "./" })
+          .then(reg => console.log("SW registrado:", reg.scope))
+          .catch(err => console.error("SW erro:", err));
+  }
+</script>
+</body>
+
+
+</html>
+
+
+

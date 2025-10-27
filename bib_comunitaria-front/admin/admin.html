@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Administrador</title>
+    <link rel="stylesheet" href="style-admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="../images/download.png" alt="logo" class="logo" />
+            <div>
+                <h1>Biblioteca da Vila</h1>
+                <p>Painel Administrativo</p>
+            </div>
+        </div>
+        <div class="usuario">
+            <div class="foto-usuario">AD</div>
+            <div class="info-usuario">
+                <p>Usuário</p>
+                <p>Admin</p>
+            </div>
+        </div>
+    </header>
+    <aside class="sidebar">
+        <nav>
+            <ul>
+                <li><a href="#dashboard">&#9776; Dashboard</a></li>
+                <li><a href="#livros">&#9998; Gerenciar Livros</a></li>
+                <li><a href="#usuarios">&#9998; Gerenciar Usuários</a></li>
+                <li><a href="#emprestimo">&#8756; Empréstimo</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <main class="conteudo">
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+            <p>Bem-vindo ao painel administrativo. Aqui você pode gerenciar todas as funcionalidades do sistema.</p>
+            <div class="infos">
+                <div class="total-livros">
+                    <div class="card-info">
+                        <div class="card-icon">
+                            <span>📖</span>
+                        </div>
+                        <div class="card-text">
+                            <h3>230</h3>
+                            <p>Total de livros</p>
+                        </div>
+                        <div class="card-stat">
+                            <span>📈</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="usuarios-ativos">
+                    <div class="card-info">
+                        <div class="card-icon">
+                            <span>👤</span>
+                        </div>
+                        <div class="card-text">
+                            <h3>282</h3>
+                            <p>Usuários cadastrados</p>
+                        </div>
+                        <div class="card-stat">
+                            <span>📈</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="emprestimos-ativos">
+                    <div class="card-info">
+                        <div class="card-icon">
+                            <span>✅</span>
+                        </div>
+                        <div class="card-text">
+                            <h3>55</h3>
+                            <p>Empréstimos ativos</p>
+                        </div>
+                        <div class="card-stat">
+                            <span>⏱</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="devolucoes-pendentes">
+                    <div class="card-info">
+                        <div class="card-icon">
+                            <span>⚠️</span>
+                        </div>
+                        <div class="card-text">
+                            <h3>12</h3>
+                            <p>Devoluções em atraso</p>
+                        </div>
+                        <div class="card-stat">
+                            <span>⏱!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lists-info">
+                <div class="Emprestimos-recentes">
+                    <div class="card-list">
+                        <div class="card-text">
+                            <h3>Empréstimos Recentes</h3>
+                            <ul>
+                                <li>João Silva - "O Alquimista" </li>
+                                <li>Maria Souza - "1984" </li>
+                                <li>Carlos Pereira - "Dom Casmurro" </li>
+                                <li>Ana Lima - "O Pequeno Príncipe" </li>
+                                <li>Lucas Fernandes - "Cem Anos de Solidão" </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lists-info">
+                <div class=Livros-mais-emprestados>
+                    <div class="card-list">
+                        <div class="card-text">
+                            <h3>Livros Mais Emprestados</h3>
+                            <ul>
+                                <li>"O Alquimista" - 45 empréstimos</li>
+                                <li>"1984" - 38 empréstimos</li>
+                                <li>"Dom Casmurro" - 32 empréstimos</li>
+                                <li>"O Pequeno Príncipe" - 29 empréstimos</li>
+                                <li>"Cem Anos de Solidão" - 25 empréstimos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="livros">
+            <h2>Gerenciar Livros</h2>
+            <p>Gerencie o catálogo de livros, adicione novos títulos, edite informações e remova itens.</p>
+            <button class="adicionar-livro-btn">+ Adicionar Livro</button>
+            <div class="search-box">
+                <input type="text" id="pesquisa" placeholder="Pesquisar por título ou autor...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="tabela-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Título</th>
+                            <th>Autor</th>
+                            <th>Status</th>
+                            <th>Cópias</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>O Pequeno Príncipe</td>
+                            <td>Antoine De Saint-Exupéry</td>
+                            <td><span class="status disponivel">Disponível</span></td>
+                            <td>5</td>
+                            <td><i class="fa-solid fa-pen-to-square acao"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Dom Casmurro</td>
+                            <td>Machado de Assis</td>
+                            <td><span class="status emprestado">Emprestado</span></td>
+                            <td>3</td>
+                            <td><i class="fa-solid fa-pen-to-square acao"></i></td>
+                        </tr>
+                        <tr>
+                            <td>1984</td>
+                            <td>George Orwell</td>
+                            <td><span class="status disponivel">Disponível</span></td>
+                            <td>4</td>
+                            <td><i class="fa-solid fa-pen-to-square acao"></i></td>
+                        </tr>
+                        <tr>
+                            <td>O Cortiço</td>
+                            <td>Aluísio Azevedo</td>
+                            <td><span class="status disponivel">Disponível</span></td>
+                            <td>3</td>
+                            <td><i class="fa-solid fa-pen-to-square acao"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Diário de um Banana</td>
+                            <td>Jeff Kinney</td>
+                            <td><span class="status emprestado">Emprestado</span></td>
+                            <td>6</td>
+                            <td><i class="fa-solid fa-pen-to-square acao"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section id="usuarios">
+            <h2>Gerenciar Usuários</h2>
+            <p>Administre usuários do sistema: cadastre novos, edite permissões e remova contas.</p>
+            <button class="adicionar-livro-btn">+ Adicionar Usuário</button>
+            <div class="search-box">
+                <input type="text" id="pesquisa" placeholder="Buscar por nome ou email...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="tabela-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Empréstimo</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Maria Madalena</td>
+                            <td>maria@gmail.com</td>
+                            <td>3</td>
+                            <td><span class="status disponivel">Ativo</span></td>
+                            <td><i class="fa-solid fa-pen-to-square acao"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Takashibata</td>
+                            <td>takashibata@gmail.com</td>
+                            <td>1</td>
+                            <td><span class="status disponivel">Ativo</span></td>
+                            <td><i class="fa-solid fa-pen-to-square acao"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Romulo</td>
+                            <td>romuloo@gmail.com</td>
+                            <td>1</td>
+                            <td><span class="status atrasado">Atrasado</span></td>
+                            <td><i class="fa-solid fa-pen-to-square acao"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Josue Ribeiro</td>
+                            <td>josuerb@gmail.com</td>
+                            <td>3</td>
+                            <td><span class="status disponivel">Ativo</span></td>
+                            <td><i class="fa-solid fa-pen-to-square acao"></i></td>
+                        </tr>
+                        <tr>
+                            <td>Aurora</td>
+                            <td>aurora11@gmail.com</td>
+                            <td>2</td>
+                            <td><span class="status disponivel">Ativo</span></td>
+                            <td><i class="fa-solid fa-pen-to-square acao"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section id="emprestimo">
+            <h2>Empréstimo</h2>
+            <p>Visualize e gerencie todos os empréstimos</p>
+            <button class="adicionar-livro-btn">+ Novo empréstimo</button>
+            <div class="search-box">
+                <input type="text" id="pesquisa" placeholder="Buscar por livro ou usuário...">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>       
+        </section>
+    </main>
+    <script src="script-admin.js"></script>
+</body>
+
+</html>
